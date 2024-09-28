@@ -1,16 +1,31 @@
 
-//const tarefa1 = prompt("Digite a 1ª tarefa");
-//const tarefa2 = prompt("Digite a 2ª tarefa");
-//const tarefa3 = prompt("Digite a 3ª tarefa");
 
 const tarefas = [];
 
-tarefas.push(prompt(`Digite a ${tarefas.length + 1}ª tarefa`));
-tarefas.push(prompt(`Digite a ${tarefas.length + 1}ª tarefa`));
-tarefas.push(prompt(`Digite a ${tarefas.length + 1}ª tarefa`));
+const qtde = Number(prompt("Quantas tarefas você quer adicionar?"));
 
+let contador = 0;
 
+while (qtde > contador) {
+    tarefas.push(prompt(`Digite a ${tarefas.length + 1}ª tarefa`));
+    //contador = contador + 1;
+    //contador +=1; soma o que quiser, até string
+    contador++; /*so aumenta 1 */
+
+}
+
+contador = 0;
 const lista = document.querySelector("ul");
-lista.innerHTML = lista.innerHTML + `<li>${tarefas[0]}</li>`
-lista.innerHTML = lista.innerHTML + `<li>${tarefas[1]}</li>`
-lista.innerHTML = lista.innerHTML + `<li>${tarefas[2]}</li>`
+while(qtde > contador) {
+    lista.innerHTML += `<li>${tarefas[contador]}</li>`;
+    contador ++;
+}
+
+
+
+
+
+/*
+if - roda o código se a condição for verdadeira - somente 1 vez
+while - roda enquanto a condição for verdadeira
+ */
