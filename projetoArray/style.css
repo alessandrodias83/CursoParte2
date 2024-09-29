@@ -13,9 +13,16 @@ body {
     max-width: 600px;
     height: 600px;
     margin: auto;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.title {
+width: 100%;
+height: 40px;
+display: flex;
 }
 
 .title input {
@@ -29,7 +36,7 @@ background-color: #EBEFF1;
     background-color: #E3538D;
     border: none;
     color: #fff;
-    width: 9%;
+    width: 10%;
     height: 40px;
 }
 
@@ -42,6 +49,9 @@ background-color: #EBEFF1;
     transform: translateY(4px);
 }
 
+.title button ion-icon {
+    font-size: 20px;
+}
 h1 {
     color: #ecf0f1;
     font-size: 24px;
@@ -53,6 +63,8 @@ h1 {
 
 input {
     background-color: #ecf0f1;
+    outline: none;
+    padding: 15px;
 }
 
 ul {
@@ -137,7 +149,7 @@ li.finalizada:nth-child(2n) {
     background-color: rgba(248,208,123,1);
     color: black;
     padding: 10px;
-    margin: 0;
+    margin: 5px;
     border: none;
     font-weight: bold;
     font-size: 18px;
