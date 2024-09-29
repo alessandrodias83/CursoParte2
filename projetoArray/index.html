@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
-</head>
-<body>
-    <ul>
-    </ul>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To-do List(3)</h1>
+            <button onclick="finalizarTodas()"><ion-icon name="checkbox-outline"></ion-icon></button>
+        </div>
+
+        <div class="title">
+            <input type="text" placeholder="Add novo To-do">
+            <button>Add</button>
+        </div>
+
+        <ul>
+            <li>
+                <div class="btn-delete">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </div>
+                <span onclick="finalizarTarefa(this)">Adicione uma tarefa no botão acima</span>
+            </li>
+
+            <li>
+                <div class="btn-delete">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </div>
+                <span onclick="finalizarTarefa(this)">Passe o mouse na tarefa para ver o botão excluir</span>
+            </li>
+
+            <li>
+                <div class="btn-delete">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </div>
+                <span onclick="finalizarTarefa(this)">Clique na tarefa para marca-la como feita</span>
+            </li>
+            
+        </ul>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg,  #E45D86, #f8d07c);
+}
+
+.container {
+    width: 600px;
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title input {
+width: 90%;
+height: 40px;
+border: none;
+background-color: #EBEFF1;
+}
+
+.title button {
+    background-color: #E3538D;
+    border: none;
+    color: #fff;
+    width: 9%;
+    height: 40px;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    color: #2c3e50;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:nth-child(2n) {
+    background-color: #ecf0f1;
+}
+
+li:hover div.btn-delete {
+    width: 40px;
+    opacity: 1.0;
+}
+
+.done {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.remove {
+    opacity: 0;
+    transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    width: 0;
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    opacity: 0;
+}
+
+
+.finalizada {
+    text-decoration: line-through;
+    font-style: italic;
+    background-color: #a3a1af;
+}
+
+li.finalizada:nth-child(2n) {
+    background-color: #a3a1af;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1a22;
+    position: relative;
+    padding: 10px;
+}
+
+
+.header h1 {
+    width: 100%;
+    color: #fff;
+}
+
+.header button {
+    background-color: rgba(248,208,123,1);
+    color: black;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+
+}
+
+.header button:active {
+    transform: translateY(4px);
+}
