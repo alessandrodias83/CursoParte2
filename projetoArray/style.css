@@ -10,7 +10,6 @@ body {
 }
 
 .container {
-    width: 600px;
     max-width: 600px;
     height: 600px;
     margin: auto;
@@ -34,6 +33,27 @@ background-color: #EBEFF1;
     height: 40px;
 }
 
+.title button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.title button:active {
+    transform: translateY(4px);
+}
+
+h1 {
+    color: #ecf0f1;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+input {
+    background-color: #ecf0f1;
+}
 
 ul {
     list-style: none;
@@ -76,12 +96,16 @@ li:hover div.btn-delete {
     margin-right: 10px;
     text-align: center;
     width: 0;
-    transition: 0.2s linear;
+    transition: all 0.2s linear;
     -webkit-transition: 0.2s linear;
     -moz-transition: 0.2s linear;
     opacity: 0;
 }
 
+li:hover div.btn-delete {
+    width: 40px;
+    opacity: 1.0;
+}
 
 .finalizada {
     text-decoration: line-through;
