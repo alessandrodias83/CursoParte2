@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg,  #E45D86, #f8d07c);
+}
+
+.container {
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+width: 100%;
+height: 40px;
+display: flex;
+}
+
+.title input {
+width: 90%;
+height: 40px;
+border: none;
+background-color: #EBEFF1;
+}
+
+.title button {
+    background-color: #E3538D;
+    border: none;
+    color: #fff;
+    width: 10%;
+    height: 40px;
+}
+
+.title button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.title button:active {
+    transform: translateY(4px);
+}
+
+.title button ion-icon {
+    font-size: 20px;
+}
+h1 {
+    color: #ecf0f1;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+input {
+    background-color: #ecf0f1;
+    outline: none;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    color: #2c3e50;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:nth-child(2n) {
+    background-color: #ecf0f1;
+}
+
+li:hover div.btn-delete {
+    width: 40px;
+    opacity: 1.0;
+}
+
+.done {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.remove {
+    opacity: 0;
+    transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    width: 0;
+    transition: all 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    opacity: 0;
+}
+
+li:hover div.btn-delete {
+    width: 40px;
+    opacity: 1.0;
+}
+
+.finalizada {
+    text-decoration: line-through;
+    font-style: italic;
+    background-color: #a3a1af;
+}
+
+li.finalizada:nth-child(2n) {
+    background-color: #a3a1af;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1a22;
+    position: relative;
+    padding: 10px;
+}
+
+
+.header h1 {
+    width: 100%;
+    color: #fff;
+}
+
+.header button {
+    background-color: rgba(248,208,123,1);
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+
+}
+
+.header button:active {
+    transform: translateY(4px);
+}
