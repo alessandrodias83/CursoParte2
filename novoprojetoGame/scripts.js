@@ -1,15 +1,21 @@
 const container = document.querySelectorAll('.container');
 
+const imagens = [
+    'bobrossparrot', 
+    'explodyparrot', 
+    'fiestaparrot', 
+    'metalparrot', 
+    'revertitparrot', 
+    'tripletsparrot', 
+    'unicornparrot'
+];
+
+let cartasSelecionadas = [];
+let jogadas = 0;
+let cartasViradasTemporarias = [];
+let cartasViradasPermanentes = 0;
+
 function iniciarJogo() {
-    const imagens = [
-        'bobrossparrot', 
-        'explodyparrot', 
-        'fiestaparrot', 
-        'metalparrot', 
-        'revertitparrot', 
-        'tripletsparrot', 
-        'unicornparrot'
-    ];
 
     let numeroCartas;
     numeroCartas = parseInt(prompt("Com quantas cartas você quer jogar? (Esolha um número par entre 4 e 14."));
@@ -18,11 +24,6 @@ function iniciarJogo() {
 
     const gamer = document.querySelector('.game');
     gamer.innerHTML = '';
-
-    let cartasSelecionadas = [];
-    let jogadas = 0;
-    let cartasViradasTemporarias = [];
-    let cartasViradasPermanentes = 0;
 
     const duplicarCartas = imagens.slice(0, numeroCartas / 2).flatMap(carta => [carta, carta]);
     duplicarCartas.sort(() => Math.random() - 0.5);
