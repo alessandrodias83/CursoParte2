@@ -1,0 +1,27 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilos para as cartas */
+.carta {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    perspective: 1000px; /* Para o efeito 3D */
+    cursor: pointer;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde a face de trás da carta */
+    transition: transform 0.5s; /* Transição para o efeito de virar */
+}
+
+.virada {
+    transform: rotateY(180deg);
+}
