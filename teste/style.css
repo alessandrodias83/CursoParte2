@@ -1,0 +1,76 @@
+body {
+    background-color: #eef9bf;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+main h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #75B79E;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    perspective: 1000px; /* Define a perspectiva para o efeito 3D */
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden; 
+    transition: transform 0.6s; 
+    transform-style: preserve-3d; /* Permite que os filhos sejam afetados pelo 3D */
+}
+
+.front {
+    transform: rotateY(0deg); /* Frente inicialmente visível */
+}
+
+.back {
+    transform: rotateY(180deg); /* Verso inicialmente oculto */
+}
+
+.card.reveal-card .front {
+    transform: rotateY(180deg); /* Rotaciona a frente para ocultar */
+}
+
+.card.reveal-card .back {
+    transform: rotateY(0deg); /* Rotaciona o verso para mostrar */
+}
+
+.back img,
+.front img {
+    width: 100px;
+    height: 100px;
+}
+
+.move-counter {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
